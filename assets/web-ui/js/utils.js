@@ -163,6 +163,7 @@ export class PackedRecordArray {
         this.elemSize = Math.ceil(this.elemSize / alignment) * alignment;
         this.size = size;
 
+        console.log("ArrayBuffer size", this.size * this.elemSize, this.size, this.elemSize);
         this.buffer = new ArrayBuffer(this.size * this.elemSize);
 
         this.fieldIndexes = {};
